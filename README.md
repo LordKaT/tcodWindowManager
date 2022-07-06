@@ -5,6 +5,7 @@ this code assumes a screen width/height of 160x90 tiles. You'll have to modify i
 
 How to use:
 
+```
 window_manager = WindowManager()
 
 # you can also create this without assigning a local variable
@@ -12,11 +13,10 @@ window_manager = WindowManager()
 main_window = window_manager.create_window(MainWindow(window_manager))
 debug_window = window_manager.create_window(DebugWindow(window_manager))
 
-
-In game loop:
+# In game loop:
 window_manager.render(console)
 
-
-In input loop:
+#In input loop:
 if isinstance(event, tcod.event.KeyDown):
   window_manager.input(event)
+```
